@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <h1><%= @restaurant.name %></h1>
+      <p>[<%= @restaurant.category.name %>]</p>
     </div>
 
     <div class="col-md-4">
@@ -16,6 +17,8 @@
       </div>
     </div>
     <div class="col-md-8">
+      <!-- simple_format 可以將一些特殊符號轉為html，例如\n換行符號轉為html的<br> -->
+      <!-- https://ihower.tw/rails/actionview-helpers.html -->
       <%= simple_format @restaurant.description %>
     </div>
     <div class="clearfix"></div>
