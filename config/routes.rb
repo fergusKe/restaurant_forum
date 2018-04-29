@@ -14,7 +14,12 @@ Rails.application.routes.draw do
       # 瀏覽個別餐廳的 Dashboard
       # GET restaurants/:id/dashboard
       get :dashboard
+      
+      # 收藏 / 取消收藏
+      post :favorite
+      post :unfavorite
     end
+    
   end
   resources :categories, only: :show
   resources :users, only: [:show, :edit, :update]
